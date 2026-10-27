@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: taller-mlp-estudiantes
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --timeout 120 app:app
